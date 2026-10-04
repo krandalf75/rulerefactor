@@ -1,0 +1,4 @@
+interface:
+  display_name: "Java Code Doctor"
+  short_description: "Find and fix Java code issues"
+  default_prompt: "Use $java-code-doctor to inspect this Java project, propose safe fixes, and verify the changes."

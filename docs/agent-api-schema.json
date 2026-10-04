@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RuleRefactor Agent API Request",
+  "type": "object",
+  "required": ["mode"],
+  "properties": {
+    "mode": {
+      "type": "string",
+      "enum": ["list-issues", "plan", "apply"]
+    },
+    "projectPath": {
+      "type": "string",
+      "default": "."
+    },
+    "dryRun": {
+      "type": "boolean",
+      "default": false
+    },
+    "verify": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["compile", "test"]
+      }
+    },
+    "selection": {
+      "type": "object",
+      "properties": {
+        "ruleKeys": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "issueIds": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}

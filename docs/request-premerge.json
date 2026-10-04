@@ -1,0 +1,29 @@
+{
+  "mode": "apply",
+  "projectPath": ".",
+  "dryRun": true,
+  "verify": ["compile", "test"],
+  "selection": {
+    "ruleKeys": [
+      "java:S1128",
+      "java:S1155",
+      "java:S2293",
+      "java:S6204",
+      "java:S1905",
+      "java:S1481",
+      "java:S1118",
+      "java:S1602",
+      "java:S2111",
+      "java:S1132",
+      "java:S1612",
+      "java:S3457",
+      "java:S4348",
+      "java:S4970",
+      "java:S2325",
+      "java:S2184",
+      "java:S2589",
+      "java:S5411",
+      "java:S2095"
+    ]
+  }
+}
