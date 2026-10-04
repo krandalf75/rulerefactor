@@ -70,7 +70,18 @@ Build with Maven Wrapper:
 Run with default Java:
 
 ```bash
-java -jar target/rulerefactor-0.1.0-SNAPSHOT.jar --help
+java -jar target/rulerefactor-0.1.0.jar --help
+```
+
+## Automated releases
+
+Pushing a tag in the form `vX.Y.Z` starts the GitHub Actions release workflow. It runs `./mvnw clean verify`, checks that the packaged application's version matches the tag, and publishes both `rulerefactor-X.Y.Z.jar` and `rulerefactor.jar` to the GitHub Release. The stable filename is used by the `java-code-doctor` skill.
+
+Before creating a release, update the Maven version in `pom.xml` and the CLI version in `RuleRefactorCommand.java` to the same value, then commit the changes. For example:
+
+```bash
+git tag -a v0.1.1 -m "Release v0.1.1"
+git push origin v0.1.1
 ```
 
 ## Troubleshooting
