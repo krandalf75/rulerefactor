@@ -14,8 +14,9 @@ Use the first valid executable JAR found in this order:
 1. The path in `RULE_REFACTOR_JAR`.
 2. `~/.cache/rulerefactor/rulerefactor.jar`.
 3. A built `target/rulerefactor-*.jar` in the RuleRefactor source checkout, if that checkout is available.
+4. If no local JAR is available, download the latest standalone JAR from `https://github.com/krandalf75/rulerefactor/releases/latest/download/rulerefactor.jar` and save it as `~/.cache/rulerefactor/rulerefactor.jar`. Request network access if the environment requires approval.
 
-Confirm the file exists and run it with Java 21 (`java -version`, then `java -jar "$JAR" --help`). Do not mistake a target project's own JAR for RuleRefactor. If the tool is missing, report that it needs to be built or installed; do not fetch binaries from an unconfigured URL. A published GitHub Release can later provide the portable JAR and stable download URL.
+Confirm the file exists and run it with Java 21 (`java -version`, then `java -jar "$JAR" --help`). Do not mistake a target project's own JAR for RuleRefactor. Do not replace a user-configured `RULE_REFACTOR_JAR` with the downloaded default.
 
 ## Scan and fix
 

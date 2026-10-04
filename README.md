@@ -162,6 +162,16 @@ Response (example):
 - Agent API examples: `docs/agent-api-examples.md`
 - Rule onboarding template: `docs/rule-onboarding-template.md`
 
+## Codex Skill
+
+The reusable `java-code-doctor` skill is available under `skills/java-code-doctor` and can be installed in Codex with:
+
+```text
+$skill-installer install https://github.com/krandalf75/rulerefactor/tree/main/skills/java-code-doctor
+```
+
+The skill uses Java 21 and downloads the standalone JAR from the latest GitHub Release when no local JAR is configured.
+
 ## Status
 
 - Detection and fix pipeline implemented for 23 Java rules.
