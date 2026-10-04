@@ -24,7 +24,7 @@ public final class IssueOutputFormatter {
     private static String toJson(List<CodeIssue> issues) {
         List<Map<String, Object>> payload = issues.stream()
                 .map(issue -> {
-                    Map<String, Object> row = new LinkedHashMap();
+                    Map<String, Object> row = new LinkedHashMap<>();
                     row.put("issueId", issue.issueId());
                     row.put("ruleKey", issue.ruleKey().value());
                     row.put("filePath", issue.filePath());

@@ -5,7 +5,7 @@ import picocli.CommandLine.Command;
 @Command(
         name = "rulerefactor",
         mixinStandardHelpOptions = true,
-        version = "RuleRefactor 0.1.0",
+        version = "RuleRefactor 0.1.1",
         description = "Automated rule-based Java refactoring",
         subcommands = {
                 ListIssuesCommand.class,

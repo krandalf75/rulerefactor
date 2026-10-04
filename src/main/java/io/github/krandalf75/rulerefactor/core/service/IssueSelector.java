@@ -15,7 +15,7 @@ public final class IssueSelector {
             return issues;
         }
 
-        Set<String> allowed = new HashSet();
+        Set<String> allowed = new HashSet<>();
         for (String rule : rules) {
             if (rule != null && !rule.isBlank()) {
                 allowed.add(rule.trim());
